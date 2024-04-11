@@ -34,3 +34,9 @@
 | Voce assinaria um pacote com beneficios exclusivos na nossa plataforma? | Gostaria somente se o preço for baixo. |
 | Gostaria que tivesse efeitos especiais ao mudar de pagina ? | Não, eu gostaria da passagem mais simples. |
 | Gostaria que a passagem de paginas fosse por clique ou por rolagem da pagina? | Gostaria que tivesse as 2 opções. |
+
+## Highlights de Pesquisa
+|Nome do Entrevistado	| Data |	Local |	O que falaram/fizeram que surprendeu| Aspectos que importaram mais para os participantes |	Principais temas ou aprendizados que surgiram|	Novos tópicos ou questões para explorar no futuro |
+| ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
+| ------------- |------------- |------------- |------------- |------------- |------------- |------------- |
+
