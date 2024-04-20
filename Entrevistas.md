@@ -36,6 +36,30 @@
 | Gostaria que tivesse efeitos especiais ao mudar de pagina ? | Sim adoraria ver as paginas passando no clique. |
 | Gostaria que a passagem de paginas fosse por clique ou por rolagem da pagina? | Gostaria que fosse por clique. |
 
+#### Entrevistado - Caroline Siqueira
+| Pergunta  | Resposta |
+| ------------- | ------------- |
+| Você gostaria de ter acesso a um site de leitura online? | Sim. |
+| Você tem dificuldades para encontrar livros? | Sim. |
+| Quais seriam suas dificuldades em uma leitura online? | Luz da tela, visão embaçada. |
+| Gostaria que a busca por livros seja feita por nome, genêro,autor,data de lançamento? | Sim. |
+| O que motiva/motiviaria a ler livros online? | Facilidade em levar para todos os lugares e mais opções de leitura |
+| Voce assinaria um pacote com beneficios exclusivos na nossa plataforma? | Sim. |
+| Gostaria que tivesse efeitos especiais ao mudar de pagina ? | Não. |
+| Gostaria que a passagem de paginas fosse por clique ou por rolagem da pagina? | Rolagem. |
+
+#### Entrevistado - Bruna Gomes
+| Pergunta  | Resposta |
+| ------------- | ------------- |
+| Você gostaria de ter acesso a um site de leitura online? | Sim. |
+| Você tem dificuldades para encontrar livros? | Não. |
+| Quais seriam suas dificuldades em uma leitura online? | Dor de cabeça. |
+| Gostaria que a busca por livros seja feita por nome, genêro,autor,data de lançamento? | Sim. |
+| O que motiva/motiviaria a ler livros online? | Ser mais prático para carregar. |
+| Voce assinaria um pacote com beneficios exclusivos na nossa plataforma? | Sim. |
+| Gostaria que tivesse efeitos especiais ao mudar de pagina ? | Não. |
+| Gostaria que a passagem de paginas fosse por clique ou por rolagem da pagina? | Rolagem. |
+
 ## Highlights de Pesquisa
 |Nome do Entrevistado	| Data |	Local |	O que falaram/fizeram que surprendeu | Aspectos que importaram mais para os participantes |	Principais temas ou aprendizados que surgiram |	Novos tópicos ou questões para explorar no futuro |
 | ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
@@ -51,5 +75,10 @@
 | ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
 | Maria Fernanda | 10/04/2024 | Minha casa | A praticidade, e poder ler a qualquer momento.  | Passagem de página simples e prática. | Aparência do site. | A relação do pacote de assinatura. |
 | Fábio Nigro  | 10/04/2024 | Minha casa | Facilidade de acesso e praticidade.   | Sensibilidade a luz. | Como iria funcionar esse pacote de assinatura. | Efeitos especiais na troca de página. |
+
+|Nome do Entrevistado	| Data |	Local |	O que falaram/fizeram que surprendeu | Aspectos que importaram mais para os participantes |	Principais temas ou aprendizados que surgiram |	Novos tópicos ou questões para explorar no futuro |
+| ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
+| Caroline Siqueira | 10/04/2024 | Casa do entrevistado | Não ter dificuldade de achar livros e que assinaria a plataforma dependendo do preço. | Possuir uma interface confortável. | Não possuir efeitos especiais, ter uma interface limpa.| Educação online. |
+| Bruna Gomes | 10/04/2024 | Casa de uma amiga | Assinaria a plataforma dependendo do preço e que não possui dificuldade em achar livros. | Reduzir a luz azul do site para não ter dores de cabeça. | Site com poucos efeitos especiais. | Educação online e um sistema de troca de livros. |
 
 
