@@ -39,6 +39,17 @@
 ## Highlights de Pesquisa
 |Nome do Entrevistado	| Data |	Local |	O que falaram/fizeram que surprendeu | Aspectos que importaram mais para os participantes |	Principais temas ou aprendizados que surgiram |	Novos tópicos ou questões para explorar no futuro |
 | ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
-| Clara Lima | 11/04/2022 | Casa do entrevistado | Não ter dificuldade de achar livros e que assinaria a plataforma dependendo do preço. | Necessidade de ler do jeito que se sente confortavel, como cor e luz. | Foco em interfaces confortavel de acordo com o gosto do cliente. | O cliente preza somente pela facilidade e conforto ao utilizar o site. |
-| Fabiana Rocha | 11/04/2022 | Casa do entrevistado | Assinaria a plataforma dependendo do preço. | Necessidade de aumentar o tamanho da letra para melhor leitura | A necessidade de ter diversas formas no conforto de cada pessoa para a leitura. | Varias opções para facilitar ou simplificar a leitura de acordo com as opções de cada usuario. |
+| Clara Lima | 11/04/2024 | Casa do entrevistado | Não ter dificuldade de achar livros e que assinaria a plataforma dependendo do preço. | Necessidade de ler do jeito que se sente confortavel, como cor e luz. | Foco em interfaces confortavel de acordo com o gosto do cliente. | O cliente preza somente pela facilidade e conforto ao utilizar o site. |
+| Fabiana Rocha | 11/04/2024 | Casa do entrevistado | Assinaria a plataforma dependendo do preço. | Necessidade de aumentar o tamanho da letra para melhor leitura | A necessidade de ter diversas formas no conforto de cada pessoa para a leitura. | Varias opções para facilitar ou simplificar a leitura de acordo com as opções de cada usuario. |
+
+|Nome do Entrevistado	| Data |	Local |	O que falaram/fizeram que surprendeu | Aspectos que importaram mais para os participantes |	Principais temas ou aprendizados que surgiram |	Novos tópicos ou questões para explorar no futuro |
+| ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
+| Júlia de Freitas | 05/04/2024 | Minha casa | Cor e brilho durante a leitura, principalmente para ajudar pessoas com astigmatismo.  | Poder mudar o brilho e cor da tela durante a leitura. | Como a claridade da tela atrapalha na leitura. | mudança de brilho/cor durante a leitura. |
+| Yara Matheus | 10/04/2022 | Minha casa | O site ter uma estética bonita e atraente  | Disponibilidade de títulos literários. | Estetica atraente do site. | Estética e modelo do site. |
+
+|Nome do Entrevistado	| Data |	Local |	O que falaram/fizeram que surprendeu | Aspectos que importaram mais para os participantes |	Principais temas ou aprendizados que surgiram |	Novos tópicos ou questões para explorar no futuro |
+| ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
+| Maria Fernanda | 10/04/2024 | Minha casa | A praticidade, e poder ler a qualquer momento.  | Passagem de página simples e prática. | Aparência do site. | A relação do pacote de assinatura. |
+| Fábio Nigro  | 10/04/2024 | Minha casa | Facilidade de acesso e praticidade.   | Sensibilidade a luz. | Como iria funcionar esse pacote de assinatura. | Efeitos especiais na troca de página. |
+
 
