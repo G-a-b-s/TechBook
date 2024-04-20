@@ -25,3 +25,9 @@
 
 ## Entrevista Qualitativa
 Clique no link para acessar as entrevistas: [Entrevistas](https://github.com/G-a-b-s/TechBook/blob/57123b39a552d4438ff2495b16cd7aeed41018e3/Entrevistas.md)
+
+## Persona
+|  Nome  | Idade | Hobby | Trabalho | Personalidade | Sonhos | Objetos e Lugares | Objetivos Chave | Como devemos tratá-la | Nunca Devemos |
+| ------------- | ------------- | ------------- | ----------- | ------------ | ------------ | ------------- | -------------- | -------------- | ------------- |
+| Sofia | 24 | Apaixonada por livros desde a infância. Ela adora explorar diferentes gêneros, mas o seu preferido é suspense. | Vendedora | É esforçada para atingir suas metas pessoais, é muito extrovertida e preza pelas amizades. | Tem o sonho de se formar na UFMG e conquistar uma casa prória. | Utiliza livros físicos para estudar, e utiliza muito as redes sóciais para se comunicar. | Ampla variedade de livros digitais tanto para lazer quanto pra estudos, redução de gastos e facilidade de transporte. | Devemos tratá-la fornecendo variedade de conteúdo​, ouvindo feedbacks para melhorias contínuas | Não ouvir seu feedback, complicar a interface, não manter a biblioteca atualizada. |
+
