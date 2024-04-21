@@ -23,6 +23,15 @@
 | Amantes da leitura |	Fonte de estudo	| Divulgação  do site |
 | ------------- | ------------- | Dinheiro |
 
+## Metodologia 
+|  Organização da equipe  | Divisão de trabalho |  |
+| ------------- | ------------- | ------------- |
+| Gustavo - Product Owner/Programador |	Coordenas o trabalho, programar, fazer pesquisas, preencher planilhas, fazer entrevistas, contribuir com ideias. |  
+| Poliana - Scrum Master/Programadora|	Coordenar o progresso do trabalho, programar, fazer pesquisas, preencher planilhas, fazer entrevistas, contribuir com ideias. |	
+| Samuel, Gabriel, André Nigro, André - Programadores |	Programar, fazer pesquisas, preencher planilhas, fazer entrevistas, contribuir com ideias.	|  
+
+
+
 ## Entrevista Qualitativa
 Clique no link para acessar as entrevistas: [Entrevistas](https://github.com/G-a-b-s/TechBook/blob/57123b39a552d4438ff2495b16cd7aeed41018e3/Entrevistas.md)
 
