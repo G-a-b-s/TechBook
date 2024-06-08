@@ -1,0 +1,128 @@
+{
+  "usuarios": [
+    {
+      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com"
+    },
+    {
+      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com"
+    }
+  ],
+  "livros": [
+    {
+      "id": 1,
+      "titulo": "Harry Potter and the Philosopher's Stone",
+      "descricao": "The book is about 11 year old Harry Potter, who receives a letter saying that he is invited to attend Hogwarts, school of witchcraft and wizardry. He then learns that a powerful wizard and his minions are after the sorcerer's stone that will make this evil wizard immortal and undefeatable.",
+      "livro": "/assets/images/Livros/hp1.jpg",
+      "paginas": 208,
+      "autor": "J. K. Rowling",
+      "categoriaId":1
+    },
+    {
+      "id": 2,
+      "titulo": "Harry Potter and the Chamber of Secrets",
+      "descricao": "Harry Potter and the Chamber of Secrets by J.K. Rowling is an enchanting and thrilling tale that follows young wizard Harry Potter as he returns to Hogwarts School of Witchcraft and Wizardry for his second year. As mysterious events unfold, Harry and his friends uncover a dark secret hidden within the school's depths.",
+      "livro": "/assets/images/Livros/hp2.jpg",
+      "paginas":224,
+      "autor": "J. K. Rowling",
+      "categoriaId":1
+    },
+    {
+      "id": 3,
+      "titulo": "Harry Potter and the Prisoner of Azkaban",
+      "descricao": "The book follows Harry Potter, a young wizard, in his third year at Hogwarts School of Witchcraft and Wizardry. Along with friends Ronald Weasley and Hermione Granger, Harry investigates Sirius Black, an escaped prisoner from Azkaban, the wizard prison, believed to be one of Lord Voldemort's old allies.",
+      "livro": "/assets/images/Livros/hp3.jpg",
+      "paginas":318,
+      "autor": "J. K. Rowling",
+      "categoriaId":1
+    },
+    {
+      "id": 4,
+      "titulo": "Harry Potter and the Goblet of Fire",
+      "descricao": "In this thrilling installment, Harry finds himself unexpectedly chosen as a competitor in the dangerous Triwizard Tournament. As he navigates through various challenges and uncovers dark secrets, he must also face the return of the dark wizard Voldemort.",
+      "livro": "/assets/images/Livros/hp4.jpg",
+      "paginas":584,
+      "autor": "J. K. Rowling",
+      "categoriaId":1
+    },
+    {
+      "id": 5,
+      "titulo": "Harry Potter and the Order of the Phoenix",
+      "descricao": "It follows Harry Potter's struggles through his fifth year at Hogwarts School of Witchcraft and Wizardry, including the surreptitious return of the antagonist Lord Voldemort, O.W.L. exams, and an obstructive Ministry of Magic.",
+      "livro": "/assets/images/Livros/hp5.jpg",
+      "paginas":702,
+      "autor": "J. K. Rowling",
+      "categoriaId":1
+    },
+    {
+      "id": 6,
+      "titulo": "Harry Potter and the Half-Blood Prince",
+      "descricao": "Set during Harry Potter's sixth year at Hogwarts, the novel explores the past of the boy wizard's nemesis, Lord Voldemort, and Harry's preparations for the final battle against Voldemort alongside his headmaster and mentor Albus Dumbledore.",
+      "livro": "/assets/images/Livros/hp6.jpg",
+      "paginas":501,
+      "autor": "J. K. Rowling",
+      "categoriaId":1
+    },
+    {
+      "id": 7,
+      "titulo": "Harry Potter and the Deathly Hallows",
+      "descricao": "Harry Potter and the Deathly Hallows is the seventh and final installment of the Harry Potter series. It follows Harry's quest to find and destroy Voldemort's Horcruxes, while the wizarding world falls into chaos and darkness.",
+      "livro": "/assets/images/Livros/hp7.jpg",
+      "paginas":607,
+      "autor": "J. K. Rowling",
+      "categoriaId":1
+    },
+    {
+      "id": 8,
+      "titulo": "Harry Potter and the Cursed Child",
+      "descricao": "It follows Albus Severus Potter, son of Harry Potter, who is now Head of the Department of Magical Law Enforcement at the Ministry of Magic. When Albus arrives at Hogwarts, he gets sorted into Slytherin, and fails to live up to his father's legacy, making him resentful of his father.",
+      "livro": "/assets/images/Livros/hp8.jpg",
+      "paginas":352,
+      "autor": "J. K. Rowling, Jack Thorne, and John Tiffany",
+      "categoriaId":6
+    }
+  ],
+  "categorias":[
+    {
+      "id": 1,
+      "nome": "Fantasia"
+    },
+    {
+      "id": 2,
+      "nome": "Drama"
+    },
+    {
+      "id": 3,
+      "nome": "Romance"
+    },
+    {
+      "id": 4,
+      "nome": "Terror"
+    },
+    {
+      "id": 5,
+      "nome": "Cientifico"
+    },
+    {
+      "id": 6,
+      "nome": "Teatral"
+    }
+  ],
+  "historico":[
+    {
+      "id": "5422dfd2-8131-4e0b-bd1f-8a11c1f724df",
+      "livroId": 1,
+      "ultimaPagina": 58,
+      "lido": "false",
+      "favorito": "true",
+      "usuarioId": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e"
+    }
+  ]
+}

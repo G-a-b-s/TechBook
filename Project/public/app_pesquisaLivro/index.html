@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/bda8ed8b75.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tela de Cadastro de Livros</title>
+</head>
+
+<body onload="init()">
+    <div class="container">
+        <div class="content">
+            <form action="" id="form-livros" class="sign-in-form">
+                <h2 class="title">Pesquisar Livros</h2>
+                    <div class="input-field">
+                        <input type="text" placeholder="Titulo" id="titulo">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Autor" id="autor">
+                    </div>
+                    <div class="input-field">
+                        <select id="categories">
+                        </select>
+                    </div>
+                <input type="submit" value="Pesquisar" class="btn">
+            </form>
+        </div>
+    </div>
+    <script src="./script/index.js"></script>
+    <script>
+        function exibeCategorias() {
+            categories = document.getElementById("categories");
+            categories.innerHTML = "";
+            categories.innerHTML += `<option value="0">Categorias</option>`;
+            getCategories (dados => {
+                for (i = 0; i < dados.length; i++) {
+                    let categorie = dados[i];
+                    categories.innerHTML += `<option value="${categorie.id}">${categorie.nome}</option>`;
+                }
+            })
+        }
+     
+        function init() {
+
+            formLivro = document.getElementById("form-livro");
+
+            exibeCategorias();
+        }
+        function uploadFile(){
+            
+            const imgPath = document.querySelector('input[type=file]').files[0];
+            const reader = new FileReader();
+
+            reader.addEventListener("load", function () {
+                localStorage.setItem(imgPath.name, reader.result);
+            }, false);
+
+            if (imgPath) {
+                reader.readAsDataURL(imgPath);
+            }
+        }
+    </script>
+</body> 
+</html>
