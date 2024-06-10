@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/bda8ed8b75.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tela de Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="signin-signup">
+            <form  action="" class="sign-in-form">
+                <h2 class="title">Entrar</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="Usuário">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Senha">
+                </div>
+                <input type="submit" value="Login" class="btn">
+               
+                <p class="account-text">Ainda não possui uma conta? <a href="#" id="sign-up-btn2">Criar conta</a></p>
+            </form>
+            <form action="" class="sign-up-form">
+                <h2 class="title">Criar uma conta</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="txt_login" placeholder="Usuário">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="txt_email" placeholder="E-mail">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="txt_senha" placeholder="Senha">
+                </div>
+                <input type="submit" value="Criar" class="btn">
+               
+                <p class="account-text">Já possui uma conta? <a href="#" id="sign-in-btn2">Entrar</a></p>
+            </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Já possui uma conta?</h3>
+                    <p>Bem-vindo de volta ao TeckBook! É ótimo tê-lo conosco novamente. Continue explorando nossa vasta coleção de livros e pesquisas, agora com ainda mais recursos personalizados para atender às suas preferências. Aproveite a sua estadia e mergulhe em um mundo de conhecimento renovado.</p>
+                    <button class="btn" id="sign-in-btn">Entrar</button>
+                </div>
+                <img src="4956560-removebg-preview.png" alt="Desenho de pessoas lendo no celular" class="imagem">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Novo ao Teckbook?</h3>
+                    <p>
+                        Explore o TeckBook! Um mundo de literatura e pesquisa ao seu alcance, totalmente gratuito. Encontre obras literárias e pesquisas acadêmicas com facilidade, tudo em uma interface intuitiva. Junte-se a nós e mergulhe em conhecimento sem limites!</p>
+                    <button class="btn" id="sign-up-btn">Criar conta</button>
+                </div>
+                <img src="5341704-removebg-preview.png" alt="Desenho de pessoas te convidando a usar o site" class="imagem">
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
