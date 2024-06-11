@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descrição</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="jumb">
+                        <h1 id="titulo">Nome do livro</h1>
+                    </div>
+                </div>
+                <div class="cars mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img id="foto_do_livro" src="img/Captura de tela 2024-05-12 191605.png"
+                                class="img-fluid rounded-start" alt="Capa do livro"
+                                style="max-width: 410px; height: 640px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="card no-border-bottom">
+                    <div class="card-header" id="titulo">
+                        <h2 id="nome_do_livro_card">Nome do livro</h2>
+                    </div>
+                </div>
+                <div class="card no-border-bottom">
+                    <div class="card-header" id="categoriaId">
+                        Gênero do livro
+                    </div>
+                </div>
+                <div class="card no-border-bottom">
+                    <div class="card-header" id="paginas">
+                        Total de páginas
+                    </div>
+                </div>
+                <div class="card no-border-bottom">
+                    <div class="card-header" id="idioma">
+                        Idioma
+                    </div>
+                </div>
+                <div class="card no-border-bottom">
+                    <div class="card-header" id="editora">
+                        Editora
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card3 mb-3">
+                    <div class="card-header">
+                        <h2>FeedBack</h2>
+                    </div>
+                    <div class="feedback-container">
+                        <div class="card4" id="leram1">
+                            <div class="card-header" id="leram">
+                                Leram
+                            <div id="leramcontador" class="contador">0</div>
+                            </div>
+                        </div>
+                        
+                        <div class="card4" id="lendo1">
+                            <div class="card-header" id="lendo">
+                                Lendo
+                            <div id="lendocontador" class="contador">0</div>
+                            </div>
+                        </div>
+                        
+                        <div class="card4" id="queremler1">
+                            <div class="card-header" id="querem_ler">
+                                Querem ler
+                            <div id="queremlercontador" class="contador">0</div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="icon1" id="favoriteButton">
+                        <div style="display: flex; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                            </svg>
+                        <p style="margin-right: 5px;">Favorito</p>
+                        </div>
+                        <div id="favoritecontador">0</div> <!-- contador de favoritos -->
+                    </div>
+                    
+                    <div class="icon2" id="likeButton">
+                        <div style="display: flex; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16" p="curitr">
+                            <path
+                            d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a10 10 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733q.086.18.138.363c.077.27.113.567.113.856s-.036.586-.113.856c-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.2 3.2 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.8 4.8 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z" />
+                            </svg>
+                        <p style="margin-right: 5px;">Curtir</p>
+                        </div>
+                        <div id="likecontador">0</div> <!-- contador de curtidas -->
+                    </div>
+                    
+                </div>
+                <div class="card3 mb-3">
+                    <div class="card-header">
+                        <h2>Sinopse</h2>
+                    </div>
+                    <p id="descriçao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, perspiciatis?
+                        Ipsum
+                        nobis voluptatem dolorem repellendus rerum iste a, aut, officiis aliquid velit ut
+                        reprehenderit
+                        maxime similique, voluptas temporibus ad voluptatum.</p>
+                    <h2 id="categoriaId">Genero do livro</h2>
+                    <p>................</p>
+                </div>
+                <div class="card3 mb-3">
+                    <div class="card-header">
+                        <h2>Biografia</h2>
+                    </div>
+                <img id="autorimagem" src="img/Captura de tela 2024-05-12 191605.png" class="img-fluid rounded-start"
+                    alt="Imagem do autor" width="100" height="100">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="autorbiografia">Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Fuga, iste eos? Rerum temporibus dignissimos, impedit vero aliquid laborum, amet
+                        architecto deserunt consequatur aut ipsam in? Commodi dolorum quaerat porro sapiente.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="java.js"></script>
+</body>
+
+</html>

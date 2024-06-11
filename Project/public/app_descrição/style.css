@@ -1,0 +1,129 @@
+body {
+    background-color: rgb(46, 60, 187);
+    margin: auto;
+    padding: auto;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right: 50px;
+}
+.card-header {
+    border-bottom: 2px solid black;
+    padding: 10px;
+}
+.card {
+    background-color: azure;
+    margin: 10px;
+    width: 410px;
+    border: 2px solid rgb(58, 55, 55);
+    border-radius: 30px;
+}
+
+img {
+    margin: 10px;
+    border-radius: 30px;
+    border: 2px solid rgb(54, 52, 52);
+}
+
+p {
+    margin: 10px;
+}
+
+.esquerda {
+    float: left;
+    margin-right: 10px;
+    padding: auto;
+}
+
+.direita {
+    float: right;
+    margin-left: 10px;
+    padding: auto;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    margin: 10px;
+    font-size: 15px;
+}
+
+.icon {
+    text-align: center;
+}
+
+.card3 {
+    margin-bottom: 10px;
+    width: 900px;
+    height: 360px;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: azure;
+}
+
+.card4 {
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+    background-color: azure;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.jumb {
+    background-color: transparent;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.icon1 {
+    margin: 20px;
+}
+.icon2{
+    margin: 20px;
+}
+
+.feedback-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+}
+#foto_do_livro {
+    height: 640px;
+}
+.card.no-border-bottom .card-header {
+    border-bottom: none;
+}
+
+
+@media (min-width: 768px) {
+    .esquerda {
+        width: 40%;
+        margin-right: 20px;
+    }
+
+    .direita {
+        width: 55%;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .esquerda,
+    .direita {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .card3 {
+        width: 100%;
+    }
+}
