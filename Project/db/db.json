@@ -22,7 +22,11 @@
       "descricao": "The book is about 11 year old Harry Potter, who receives a letter saying that he is invited to attend Hogwarts, school of witchcraft and wizardry. He then learns that a powerful wizard and his minions are after the sorcerer's stone that will make this evil wizard immortal and undefeatable.",
       "livro": "/assets/images/livros/hp1.jpg",
       "paginas": 208,
+      "idioma":"",
+      "editora":"",
       "autor": "J. K. Rowling",
+      "autorimagem":"",
+      "autorbiografia":"",
       "categoriaId":1
     },
     {
@@ -31,7 +35,11 @@
       "descricao": "Harry Potter and the Chamber of Secrets by J.K. Rowling is an enchanting and thrilling tale that follows young wizard Harry Potter as he returns to Hogwarts School of Witchcraft and Wizardry for his second year. As mysterious events unfold, Harry and his friends uncover a dark secret hidden within the school's depths.",
       "livro": "/assets/images/livros/hp2.jpg",
       "paginas":224,
+      "idioma":"",
+      "editora":"",
       "autor": "J. K. Rowling",
+      "autorimagem":"",
+      "autorbiografia":"",
       "categoriaId":1
     },
     {
@@ -40,7 +48,11 @@
       "descricao": "The book follows Harry Potter, a young wizard, in his third year at Hogwarts School of Witchcraft and Wizardry. Along with friends Ronald Weasley and Hermione Granger, Harry investigates Sirius Black, an escaped prisoner from Azkaban, the wizard prison, believed to be one of Lord Voldemort's old allies.",
       "livro": "/assets/images/livros/hp3.jpg",
       "paginas":318,
+      "idioma":"",
+      "editora":"",
       "autor": "J. K. Rowling",
+      "autorimagem":"",
+      "autorbiografia":"",
       "categoriaId":1
     },
     {
@@ -49,7 +61,11 @@
       "descricao": "In this thrilling installment, Harry finds himself unexpectedly chosen as a competitor in the dangerous Triwizard Tournament. As he navigates through various challenges and uncovers dark secrets, he must also face the return of the dark wizard Voldemort.",
       "livro": "/assets/images/livros/hp4.jpg",
       "paginas":584,
+      "idioma":"",
+      "editora":"",
       "autor": "J. K. Rowling",
+      "autorimagem":"",
+      "autorbiografia":"",
       "categoriaId":1
     },
     {
@@ -58,7 +74,11 @@
       "descricao": "It follows Harry Potter's struggles through his fifth year at Hogwarts School of Witchcraft and Wizardry, including the surreptitious return of the antagonist Lord Voldemort, O.W.L. exams, and an obstructive Ministry of Magic.",
       "livro": "/assets/images/livros/hp5.jpg",
       "paginas":702,
+      "idioma":"",
+      "editora":"",
       "autor": "J. K. Rowling",
+      "autorimagem":"",
+      "autorbiografia":"",
       "categoriaId":1
     },
     {
@@ -67,7 +87,11 @@
       "descricao": "Set during Harry Potter's sixth year at Hogwarts, the novel explores the past of the boy wizard's nemesis, Lord Voldemort, and Harry's preparations for the final battle against Voldemort alongside his headmaster and mentor Albus Dumbledore.",
       "livro": "/assets/images/livros/hp6.jpg",
       "paginas":501,
+      "idioma":"",
+      "editora":"",
       "autor": "J. K. Rowling",
+      "autorimagem":"",
+      "autorbiografia":"",
       "categoriaId":1
     },
     {
@@ -76,7 +100,11 @@
       "descricao": "Harry Potter and the Deathly Hallows is the seventh and final installment of the Harry Potter series. It follows Harry's quest to find and destroy Voldemort's Horcruxes, while the wizarding world falls into chaos and darkness.",
       "livro": "/assets/images/livros/hp7.jpg",
       "paginas":607,
+      "idioma":"",
+      "editora":"",
       "autor": "J. K. Rowling",
+      "autorimagem":"",
+      "autorbiografia":"",
       "categoriaId":1
     },
     {
@@ -85,7 +113,11 @@
       "descricao": "It follows Albus Severus Potter, son of Harry Potter, who is now Head of the Department of Magical Law Enforcement at the Ministry of Magic. When Albus arrives at Hogwarts, he gets sorted into Slytherin, and fails to live up to his father's legacy, making him resentful of his father.",
       "livro": "/assets/images/livros/hp8.jpg",
       "paginas":352,
+      "idioma":"",
+      "editora":"",
       "autor": "J. K. Rowling, Jack Thorne, and John Tiffany",
+      "autorimagem":"",
+      "autorbiografia":"",
       "categoriaId":6
     }
   ],
