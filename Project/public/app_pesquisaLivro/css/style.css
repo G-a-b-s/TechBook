@@ -82,6 +82,39 @@ form{
     cursor: pointer;
 }
 
+
 .btn:hover{
-    background: blue;
+    background: darkblue;
+}
+
+#results {
+    width: 100%;
+    margin-top: 20px;
+    overflow-y: auto;
+    height: calc(90vh - 160px); /* Adjust based on container padding and title/form height */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+thead {
+    background-color: #f0f0f0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: darkblue;
+    color: white;
+}
+
+td img {
+    width: 50px;
 }

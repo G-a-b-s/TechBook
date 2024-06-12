@@ -23,8 +23,23 @@
                     <select id="categories">
                     </select>
                 </div>
-            <input type="submit" value="Pesquisar" class="btn">
+                 <input type="submit" value="Pesquisar" class="btn">
         </form>
+        <div id="results">
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Livro</th>
+                        <th>Titulo</th>
+                        <th>Autor</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--resultsTable-->
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="./script/index.js"></script>
     <script>
@@ -41,23 +56,15 @@
         }
      
         function init() {
-
-            formLivro = document.getElementById("form-livro");
-
-            exibeCategorias();
-        }
-        function uploadFile(){
+            document.getElementById('form-livros').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const title = document.getElementById('titulo').value.toLowerCase();
+                const author = document.getElementById('autor').value.toLowerCase();
+                const category = document.getElementById('categories').value;
+                searchBooks(title,author,category);
+            });
             
-            const imgPath = document.querySelector('input[type=file]').files[0];
-            const reader = new FileReader();
-
-            reader.addEventListener("load", function () {
-                localStorage.setItem(imgPath.name, reader.result);
-            }, false);
-
-            if (imgPath) {
-                reader.readAsDataURL(imgPath);
-            }
+            exibeCategorias();
         }
     </script>
 </body> 
