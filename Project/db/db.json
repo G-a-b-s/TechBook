@@ -28,7 +28,6 @@
       "autorimagem":"",
       "autorbiografia":"",
       "categoriaId":1,
-      "favorito": true,
       "data_cadastro":"09-06-2024"
     },
     {
@@ -43,7 +42,6 @@
       "autorimagem":"",
       "autorbiografia":"",
       "categoriaId":1,
-      "favorito": false,
       "data_cadastro":"2024-06-10"
     },
     {
@@ -58,7 +56,6 @@
       "autorimagem":"",
       "autorbiografia":"",
       "categoriaId":1,
-      "favorito": true,
       "data_cadastro": "2024-06-8"
     },
     {
@@ -73,7 +70,6 @@
       "autorimagem":"",
       "autorbiografia":"",
       "categoriaId":1,
-      "favorito": false,
       "data_cadastro": "2024-06-7"
     },
     {
@@ -88,7 +84,6 @@
       "autorimagem":"",
       "autorbiografia":"",
       "categoriaId":1,
-      "favorito": true,
       "data_cadastro": "2024-06-6"
     },
     {
@@ -103,7 +98,6 @@
       "autorimagem":"",
       "autorbiografia":"",
       "categoriaId":1,
-      "favorito": false,
       "data_cadastro": "2023-06-6"
     },
     {
@@ -118,7 +112,6 @@
       "autorimagem":"",
       "autorbiografia":"",
       "categoriaId":1,
-      "favorito": true,
       "data_cadastro": "2023-06-6"
     },
     {
@@ -132,8 +125,9 @@
       "autor": "J. K. Rowling, Jack Thorne, and John Tiffany",
       "autorimagem":"",
       "autorbiografia":"",
-<<<<<<< Updated upstream
-      "categoriaId":6
+      "categoriaId":6,
+      "data_cadastro": "2023-06-6"
+
     },
     {
       "id": 9,
@@ -146,7 +140,8 @@
       "autor": "Machado de Assis",
       "autorimagem":"",
       "autorbiografia":"",
-      "categoriaId":3
+      "categoriaId":3,
+      "data_cadastro": "2023-06-12"
     },
     {
       "id": 10,
@@ -159,7 +154,8 @@
       "autor": "Jorge Amado",
       "autorimagem":"",
       "autorbiografia":"",
-      "categoriaId":3
+      "categoriaId":3,
+      "data_cadastro": "2023-06-12"
     },
     {
       "id": 11,
@@ -172,7 +168,8 @@
       "autor": "Alexandre Dumas",
       "autorimagem":"",
       "autorbiografia":"",
-      "categoriaId":7
+      "categoriaId":7,
+      "data_cadastro": "2023-06-12"
     }
     ,
     {
@@ -186,12 +183,8 @@
       "autor": "John Fowles",
       "autorimagem":"",
       "autorbiografia":"",
-      "categoriaId":4
-=======
-      "categoriaId":6,
-      "favorito": false,
-      "data_cadastro": "2023-06-6"
->>>>>>> Stashed changes
+      "categoriaId":4,
+      "data_cadastro": "2023-06-12"
     }
   ],
   "categorias":[
@@ -230,32 +223,32 @@
       "id": "5422dfd2-8131-4e0b-bd1f-8a11c1f724df",
       "livroId": 1,
       "ultimaPagina": 58,
-      "lido": "false",
-      "favorito": "true",
+      "lido": false,
+      "favorito": true,
       "usuarioId": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e"
     },
     {
       "id": "5422dfd2-8131-4e0b-bd1f-8a11c1f724df",
       "livroId": 4,
       "ultimaPagina": 58,
-      "lido": "false",
-      "favorito": "true",
+      "lido": false,
+      "favorito": true,
       "usuarioId": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e"
     },
     {
       "id": "5422dfd2-8131-4e0b-bd1f-8a11c1f724df",
       "livroId": 3,
       "ultimaPagina": 58,
-      "lido": "false",
-      "favorito": "true",
+      "lido": false,
+      "favorito": true,
       "usuarioId": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e"
     },
     {
       "id": "5422dfd2-8131-4e0b-bd1f-8a11c1f724df",
       "livroId": 5,
       "ultimaPagina": 58,
-      "lido": "false",
-      "favorito": "false",
+      "lido": false,
+      "favorito": false,
       "usuarioId": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e"
     }
   ]
