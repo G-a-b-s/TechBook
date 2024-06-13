@@ -27,67 +27,73 @@ const LOGIN_URL = "index.html";
 // parte de login e cadastro
 
 document.addEventListener('DOMContentLoaded', () => {
-    const signInBtn = document.getElementById('sign-in-btn');
-    const signUpBtn = document.getElementById('sign-up-btn');
-    const signInForm = document.querySelector('.sign-in-form');
-    const signUpForm = document.querySelector('.sign-up-form');
+    const signUpForm = document.getElementById('signUpForm');
+    const signInForm = document.getElementById('signInForm');
 
-    const signInBtn2 = document.getElementById('sign-in-btn2');
-    const signUpBtn2 = document.getElementById('sign-up-btn2');
-
-
-    signInBtn.addEventListener('click', () => {
-        document.querySelector('.container').classList.remove('sign-up-mode');
-    });
-
-
-    signUpBtn.addEventListener('click', () => {
-        document.querySelector('.container').classList.add('sign-up-mode');
-    });
-
-    signInBtn2.addEventListener('click', () => {
-        document.querySelector('.container').classList.remove('sign-up-mode');
-    });
-
-    signUpBtn2.addEventListener('click', () => {
-        document.querySelector('.container').classList.add('sign-up-mode');
-    });
-
-
-    signUpForm.addEventListener('submit', (e) => {
+    // cadastro 
+    signUpForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const username = document.getElementById('txt_login').value;
         const email = document.getElementById('txt_email').value;
         const password = document.getElementById('txt_senha').value;
 
-        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const response = await fetch('http://localhost:3000/usuarios');
+        const data = await response.json();
+        const users = data.usuarios;
 
-        const userExists = users.some(user => user.username === username);
+        const userExists = users.some(user => user.login === username);
 
         if (userExists) {
-            alert('Usuário já existe!');
+            alert('Usuário já existente!');
         } else {
-            users.push({ username, email, password });
-            localStorage.setItem('users', JSON.stringify(users));
+            const newUser = {
+                id: generateUUID(),
+                login: username,
+                senha: password,
+                nome: '',
+                email: email
+            };
+            users.push(newUser);
+
+            await fetch('http://localhost:3000/usuarios', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ usuarios: users })
+            });
+
             alert('Conta criada com sucesso!');
             signUpForm.reset();
             document.querySelector('.container').classList.remove('sign-up-mode');
         }
     });
 
-    signInForm.addEventListener('submit', (e) => {
+    // login
+    signInForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const response = await fetch('http://localhost:3000/usuarios');
+        const data = await response.json();
+        const users = data.usuarios;
 
-        const validUser = users.find(user => user.username === username && user.password === password);
+        const validUser = users.find(user => user.login === username && user.senha === password);
 
         if (validUser) {
-            alert('Login bem-sucedido!');
+            alert('Login feito com sucesso!');
         } else {
             alert('Credenciais inválidas!');
         }
     });
+
+    // gera o id do user
+    function generateUUID() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            const r = (Math.random() * 16) | 0,
+                  v = c == 'x' ? r : (r & 0x3) | 0x8;
+            return v.toString(16);
+        });
+    }
 });
