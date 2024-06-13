@@ -12,23 +12,28 @@ function getCategories(processaDados) {
         });
 }
 function searchBooks(title,author,category) {
-    fetch('/livros')
-        .then(response => response.json())
-        .then(data => {
-            debugger
+    Promise.all([
+        fetch('/categorias').then(response => response.json()),
+        fetch('/livros').then(response => response.json())
+    ])
+    .then(([categorias, livros]) => {
             const resultsTableBody = document.querySelector('#resultsTable tbody');
             resultsTableBody.innerHTML = '';
-            data.forEach(item => {
+            livros.forEach(item => {
                 if (item.titulo.toLowerCase().includes(title)
                     && item.autor.toLowerCase().includes(author)
                     && (item.categoriaId == category || category == 0)) 
                 {
                     debugger
+                    const categoria = categorias.find(x => x.id == item.categoriaId).nome
+
                     const row = document.createElement('tr');
                     const imageCell = document.createElement('td');
                     const titleCell = document.createElement('td');
                     const autorCell = document.createElement('td');
+                    const categoriaCell = document.createElement('td');
                     const descriptionCell = document.createElement('td');
+                    
 
                     const img = document.createElement('img');
                     img.src = item.livro;
@@ -38,12 +43,14 @@ function searchBooks(title,author,category) {
                     imageCell.appendChild(img);
                     titleCell.textContent = item.titulo;
                     descriptionCell.textContent = item.descricao;
+                    categoriaCell.textContent = categoria;
                     autorCell.textContent = item.autor;
 
 
                     row.appendChild(imageCell);
                     row.appendChild(titleCell);
                     row.appendChild(autorCell);
+                    row.appendChild(categoriaCell);
                     row.appendChild(descriptionCell);
                     resultsTableBody.appendChild(row);
                 }
