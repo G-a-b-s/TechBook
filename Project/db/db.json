@@ -27,7 +27,9 @@
       "autor": "J. K. Rowling",
       "autorimagem":"",
       "autorbiografia":"",
-      "categoriaId":1
+      "categoriaId":1,
+      "favorito": true,
+      "data_cadastro":"09-06-2024"
     },
     {
       "id": 2,
@@ -40,7 +42,9 @@
       "autor": "J. K. Rowling",
       "autorimagem":"",
       "autorbiografia":"",
-      "categoriaId":1
+      "categoriaId":1,
+      "favorito": false,
+      "data_cadastro":"2024-06-10"
     },
     {
       "id": 3,
@@ -53,7 +57,9 @@
       "autor": "J. K. Rowling",
       "autorimagem":"",
       "autorbiografia":"",
-      "categoriaId":1
+      "categoriaId":1,
+      "favorito": true,
+      "data_cadastro": "2024-06-8"
     },
     {
       "id": 4,
@@ -66,7 +72,9 @@
       "autor": "J. K. Rowling",
       "autorimagem":"",
       "autorbiografia":"",
-      "categoriaId":1
+      "categoriaId":1,
+      "favorito": false,
+      "data_cadastro": "2024-06-7"
     },
     {
       "id": 5,
@@ -79,7 +87,9 @@
       "autor": "J. K. Rowling",
       "autorimagem":"",
       "autorbiografia":"",
-      "categoriaId":1
+      "categoriaId":1,
+      "favorito": true,
+      "data_cadastro": "2024-06-6"
     },
     {
       "id": 6,
@@ -92,7 +102,9 @@
       "autor": "J. K. Rowling",
       "autorimagem":"",
       "autorbiografia":"",
-      "categoriaId":1
+      "categoriaId":1,
+      "favorito": false,
+      "data_cadastro": "2023-06-6"
     },
     {
       "id": 7,
@@ -105,7 +117,9 @@
       "autor": "J. K. Rowling",
       "autorimagem":"",
       "autorbiografia":"",
-      "categoriaId":1
+      "categoriaId":1,
+      "favorito": true,
+      "data_cadastro": "2023-06-6"
     },
     {
       "id": 8,
@@ -118,6 +132,7 @@
       "autor": "J. K. Rowling, Jack Thorne, and John Tiffany",
       "autorimagem":"",
       "autorbiografia":"",
+<<<<<<< Updated upstream
       "categoriaId":6
     },
     {
@@ -172,6 +187,11 @@
       "autorimagem":"",
       "autorbiografia":"",
       "categoriaId":4
+=======
+      "categoriaId":6,
+      "favorito": false,
+      "data_cadastro": "2023-06-6"
+>>>>>>> Stashed changes
     }
   ],
   "categorias":[
