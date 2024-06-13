@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Carregar livros na página inicial
     if (document.getElementById('book-list')) {
-        fetch('db.json')
+        fetch('/livros')
             .then(response => response.json())
             .then(data => {
-                const sortedBooks = data.livros.sort((a, b) => new Date(b.data_cadastro) - new Date(a.data_cadastro));
+                debugger
+                const sortedBooks = data.sort((a, b) => new Date(b.data_cadastro) - new Date(a.data_cadastro));
                 const latestBooks = sortedBooks.slice(0, 5);
 
                 const bookList = document.getElementById('book-list');
@@ -50,9 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Carregar livros mais favoritados
  if (document.getElementById('fav-book-list')) {
-    fetch('db.json')
+    fetch('/historico')
         .then(response => response.json())
         .then(data => {
+            debugger
             const books = data.livros;
             const history = data.historico;
             const favBooks = history.filter(item => item.favorito === "true").map(item => item.livroId);
@@ -103,3 +105,12 @@ document.getElementById('inicio-button').addEventListener('click', function(even
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 });
+
+function retornaLivros(){
+    fetch('/livros')
+    .then(response => response.json())
+    .then(data => {
+        return data;
+    })
+    .catch(error => console.error('Erro ao carregar os livros favoritados:', error));
+}

@@ -1,15 +1,15 @@
 
 body{
-    display: flex;
+    display: absolute;
     min-height: 100vh;
     background: #3d25aa;
 }
 
 .container{
     position: relative;
-    width: 99vw;
+    width: 100vw;
     height: 90vh;
-    top:9vh;
+    top:5vh;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
@@ -117,4 +117,17 @@ th {
 
 td img {
     width: 50px;
+}
+
+.navbar-custom {
+    background-color: #3d25aa;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: white;
+}
+.navbar-custom .nav-link:hover {
+    color: #d1ecf1;
 }
