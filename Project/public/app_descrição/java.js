@@ -45,13 +45,13 @@ document.getElementById('queremler1').addEventListener('click', function () {
     document.getElementById('queremlercontador').innerText = contqueremler;
 });
 
-document.getElementById('favoriteButton').addEventListener('click', function () {
-    if (estadoBotoes.favoriteButton) {
+document.getElementById('favorito').addEventListener('click', function () {
+    if (estadoBotoes.favorito) {
         contadorFavoritos--;
-        estadoBotoes.favoriteButton = false;
+        estadoBotoes.favorito = false;
     } else {
         contadorFavoritos++;
-        estadoBotoes.favoriteButton = true;
+        estadoBotoes.favorito = true;
     }
     document.getElementById('favoritecontador').innerText = contadorFavoritos;
 });
