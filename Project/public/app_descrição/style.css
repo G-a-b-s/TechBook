@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(46, 60, 187);
+    background-color: #3d25aa;
     margin: auto;
     padding: auto;
 }
@@ -126,4 +126,16 @@ h2 {
     .card3 {
         width: 100%;
     }
+}
+.navbar-custom {
+  background-color: #3d25aa;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: white;
+}
+.navbar-custom .nav-link:hover {
+  color: #d1ecf1;
 }
