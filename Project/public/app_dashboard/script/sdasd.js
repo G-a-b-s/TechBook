@@ -1,10 +1,22 @@
+async function fetchJson(url) {
+    try {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+    } catch (error) {
+    console.error('Error fetching the JSON data:', error);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Carregar livros na página inicial
     if (document.getElementById('book-list')) {
         fetch('/livros')
             .then(response => response.json())
             .then(data => {
-                debugger
                 const sortedBooks = data.sort((a, b) => new Date(b.data_cadastro) - new Date(a.data_cadastro));
                 const latestBooks = sortedBooks.slice(0, 5);
 
@@ -51,16 +63,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Carregar livros mais favoritados
  if (document.getElementById('fav-book-list')) {
+    let livros;
+    fetchJson("/livros")
+    .then(data => {
+        livros = data;
+        console.log('JSON Data:', jsonData);
+    })
+    .catch(error => console.error('Error:', error));
+
     fetch('/historico')
         .then(response => response.json())
         .then(data => {
-            debugger
-            const books = data.livros;
-            const history = data.historico;
+            const books = livros;
+            //const books = data.livros;
+            const history = data;
+
             const favBooks = history.filter(item => item.favorito === "true").map(item => item.livroId);
             const favBookElements = books.filter(book => favBooks.includes(book.id));
-            const favBookList = document.getElementById('fav-book-list');
             
+            const favBookList = document.getElementById('fav-book-list');
+            debugger
             favBookElements.forEach(book => {
                 const colDiv = document.createElement('div');
                 colDiv.classList.add('col-md-3', 'mb-4');
@@ -105,12 +127,3 @@ document.getElementById('inicio-button').addEventListener('click', function(even
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 });
-
-function retornaLivros(){
-    fetch('/livros')
-    .then(response => response.json())
-    .then(data => {
-        return data;
-    })
-    .catch(error => console.error('Erro ao carregar os livros favoritados:', error));
-}
