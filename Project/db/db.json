@@ -119,6 +119,59 @@
       "autorimagem":"",
       "autorbiografia":"",
       "categoriaId":6
+    },
+    {
+      "id": 9,
+      "titulo": "Dom Casmurro",
+      "descricao": "Dom Casmurro conta a história de Bento Santiago (Bentinho), apelidado de Dom Casmurro por ser calado e introvertido. Na adolescência, apaixona-se por Capítu, abandonando o seminário e, com ele, os desígnios traçados por sua mãe, Dona Glória, para que se tornasse padre.",
+      "livro": "../assets/img/livros/domcasmurro.jpeg",
+      "paginas":346,
+      "idioma":"",
+      "editora":"",
+      "autor": "Machado de Assis",
+      "autorimagem":"",
+      "autorbiografia":"",
+      "categoriaId":3
+    },
+    {
+      "id": 10,
+      "titulo": "Capitães de Areia",
+      "descricao": "O romance, que retrata o cotidiano de um grupo de meninos de rua, procura mostrar não apenas os assaltos e as atitudes violentas de sua vida bestializada, mas também as aspirações e os pensamentos.",
+      "livro": "../assets/img/livros/capitaesareia.jpg",
+      "paginas":283,
+      "idioma":"",
+      "editora":"",
+      "autor": "Jorge Amado",
+      "autorimagem":"",
+      "autorbiografia":"",
+      "categoriaId":3
+    },
+    {
+      "id": 11,
+      "titulo": "O Conde de Monte Cristo",
+      "descricao": "O livro gira em torno de Edmond Dantès, preso por um crime que não cometeu, Edmond é inspiração do romancista em uma história real, Pierre Picaud, um sapateiro preso injustamente num esquema político na época do Primeiro Império. Edmond após anos preso sai em busca de vingança contra seus inimigos.",
+      "livro": "../assets/img/livros/Conde de Monte Cristo.jpg",
+      "paginas":1376,
+      "idioma":"",
+      "editora":"",
+      "autor": "Alexandre Dumas",
+      "autorimagem":"",
+      "autorbiografia":"",
+      "categoriaId":7
+    }
+    ,
+    {
+      "id": 12,
+      "titulo": "O Colecionador",
+      "descricao": "O Colecionador também é a história de Miranda Gray, uma jovem estudante de artes sequestrada por um maníaco que acha que pode obrigá-la a se apaixonar por ele. Tudo o que ela deseja é escapar do cativeiro, e vai usar de toda sua inteligência para sobreviver ao inferno em que sua vida se transformou.",
+      "livro": "../assets/img/livros/OColecionador.jpg",
+      "paginas":238,
+      "idioma":"",
+      "editora":"",
+      "autor": "John Fowles",
+      "autorimagem":"",
+      "autorbiografia":"",
+      "categoriaId":4
     }
   ],
   "categorias":[
@@ -145,6 +198,11 @@
     {
       "id": 6,
       "nome": "Teatral"
+    }
+    ,
+    {
+      "id": 7,
+      "nome": "Aventura"
     }
   ],
   "historico":[
