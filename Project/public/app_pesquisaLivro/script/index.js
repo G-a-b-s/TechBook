@@ -19,13 +19,13 @@ function searchBooks(title,author,category) {
     .then(([categorias, livros]) => {
             const resultsTableBody = document.querySelector('#resultsTable tbody');
             resultsTableBody.innerHTML = '';
-            livros.forEach(item => {
+            livros.sort((a, b) => (a.titulo.toLowerCase() > b.titulo.toLowerCase() ? 1 : -1))
+            .forEach(item => {
                 if (item.titulo.toLowerCase().includes(title)
                     && item.autor.toLowerCase().includes(author)
                     && (item.categoriaId == category || category == 0)) 
                 {
-                    debugger
-                    const categoria = categorias.find(x => x.id == item.categoriaId).nome
+                    const categoria = categorias.find(x => x.id == item.categoriaId).nome;
 
                     const row = document.createElement('tr');
                     const imageCell = document.createElement('td');
@@ -33,19 +33,25 @@ function searchBooks(title,author,category) {
                     const autorCell = document.createElement('td');
                     const categoriaCell = document.createElement('td');
                     const descriptionCell = document.createElement('td');
-                    
+                    const link = '../app_descrição/index.html?'+item.id;
 
+                    const linkImg = document.createElement('a');
                     const img = document.createElement('img');
                     img.src = item.livro;
                     img.alt = item.titulo;
                     img.style.width = '50px';
+                    linkImg.appendChild(img);
+                    linkImg.setAttribute('href', link );
 
-                    imageCell.appendChild(img);
-                    titleCell.textContent = item.titulo;
+                    const linkTitle = document.createElement('a');
+                    linkTitle.setAttribute('href', link );
+                    linkTitle.textContent = item.titulo;
+
+                    imageCell.appendChild(linkImg);
+                    titleCell.appendChild(linkTitle);
                     descriptionCell.textContent = item.descricao;
                     categoriaCell.textContent = categoria;
                     autorCell.textContent = item.autor;
-
 
                     row.appendChild(imageCell);
                     row.appendChild(titleCell);
