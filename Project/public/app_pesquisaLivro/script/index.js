@@ -33,7 +33,8 @@ function searchBooks(title,author,category) {
                     const autorCell = document.createElement('td');
                     const categoriaCell = document.createElement('td');
                     const descriptionCell = document.createElement('td');
-                    const link = '../app_descrição/index.html?'+item.id;
+                    
+                    const link = '../app_descrição/index.html?id='+item.id;
 
                     const linkImg = document.createElement('a');
                     const img = document.createElement('img');

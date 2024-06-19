@@ -66,3 +66,33 @@ document.getElementById('likeButton').addEventListener('click', function () {
     }
     document.getElementById('likecontador').innerText = contadorLikes;
 });
+
+function init(){
+    let params = new URLSearchParams(window.location.search);
+    let id = params.get('id');
+    searchBooks(id);
+}
+
+function searchBooks(id) {
+    Promise.all([
+        fetch('/categorias').then(response => response.json()),
+        fetch('/livros').then(response => response.json()),
+        fetch('/historico').then(response => response.json())
+    ])
+    .then(([categorias, livros,historico]) => {
+
+        const livro = livros.find(x => x.id == id);
+        const categoria = categorias.find(x=>x.id == livro.categoriaId).nome;
+        
+        //const user = "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e";
+        //const userLikes = historico.find(x => x.usuarioId == user && x.livroId == id);
+
+        document.getElementById('titulo').innerText=livro.titulo;
+        document.getElementById('headerTitulo').innerText=livro.titulo;
+        document.getElementById('livro').src = livro.livro;
+           
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}
