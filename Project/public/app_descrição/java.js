@@ -12,7 +12,7 @@ var estadoBotoes = {
     likeButton: false
 };
 
-document.getElementById('leram1').addEventListener('click', function () {
+/*document.getElementById('leram1').addEventListener('click', function () {
     if (estadoBotoes.leram1) {
         contleram--;
         estadoBotoes.leram1 = false;
@@ -44,6 +44,7 @@ document.getElementById('queremler1').addEventListener('click', function () {
     }
     document.getElementById('queremlercontador').innerText = contqueremler;
 });
+*/
 
 document.getElementById('favorito').addEventListener('click', function () {
     if (estadoBotoes.favorito) {
@@ -67,7 +68,7 @@ document.getElementById('likeButton').addEventListener('click', function () {
     document.getElementById('likecontador').innerText = contadorLikes;
 });
 
-function init(){
+function init() {
     let params = new URLSearchParams(window.location.search);
     let id = params.get('id');
     searchBooks(id);
@@ -79,18 +80,22 @@ function searchBooks(id) {
         fetch('/livros').then(response => response.json()),
         fetch('/historico').then(response => response.json())
     ])
-    .then(([categorias, livros,historico]) => {
+        .then(([categorias, livros, historico]) => {
 
-        const livro = livros.find(x => x.id == id);
-        const categoria = categorias.find(x=>x.id == livro.categoriaId).nome;
-        
-        //const user = "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e";
-        //const userLikes = historico.find(x => x.usuarioId == user && x.livroId == id);
+            const livro = livros.find(x => x.id == id);
+            const categoria = categorias.find(x => x.id == livro.categoriaId).nome;
 
-        document.getElementById('titulo').innerText=livro.titulo;
-        document.getElementById('headerTitulo').innerText=livro.titulo;
-        document.getElementById('livro').src = livro.livro;
-           
+            //const user = "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e";
+            //const userLikes = historico.find(x => x.usuarioId == user && x.livroId == id);
+
+            document.getElementById('autor').innerText = livro.autor;
+            document.getElementById('headerTitulo').innerText = livro.titulo;
+            document.getElementById('categoriaId').innerText = livro.categoriaId;
+            document.getElementById('paginas').innerText = livro.paginas;
+            document.getElementById('idioma').innerText = livro.idioma;
+            document.getElementById('editora').innerText = livro.editora;
+            document.getElementById('descricao').innerText = livro.descricao;
+
         })
         .catch(error => {
             console.error('Error fetching data:', error);
