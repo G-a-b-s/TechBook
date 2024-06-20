@@ -90,6 +90,7 @@ function searchBooks(id) {
 
             document.getElementById('autor').innerText = livro.autor;
             document.getElementById('headerTitulo').innerText = livro.titulo;
+            document.getElementById('livro').src = livro.livro;
             document.getElementById('categoriaId').innerText = livro.categoriaId;
             document.getElementById('paginas').innerText = livro.paginas;
             document.getElementById('idioma').innerText = livro.idioma;
