@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const userExists = users.some(user => user.username === username);
 
         if (userExists) {
-            alert('Usuário já existente !');
+            alert('Usuário já existente!');
         } else {
             const id = generateId();
             users.push({ id, username, email, password });
@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const validUser = users.find(user => user.username === username && user.password === password);
 
         if (validUser) {
+            window.location.href = 'http://127.0.0.1:5500/Project/public/app_dashboard/index.html'; 
             alert('Login feito com sucesso!');
         } else {
             alert('Credenciais inválidas!');
