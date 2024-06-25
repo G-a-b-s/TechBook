@@ -2,9 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #3d25aa;
 }
-
+.container{
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    top:2vh;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    overflow: auto;
+}
 main {
     padding: 20px;
 }
@@ -22,14 +31,16 @@ section {
 }
 
 footer {
-    background-color: blue;
+    background-color:#3d25aa;
     color: white;
     text-align: center;
     padding: 10px 0;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .navbar-custom {
-    background-color: blue;
+    background-color: #3d25aa;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
 }
 .navbar-custom .navbar-brand,
 .navbar-custom .nav-link {
@@ -38,3 +49,12 @@ footer {
 .navbar-custom .nav-link:hover {
     color: #d1ecf1;
 }
+
+.card-img-top {
+    height: 250px; 
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.00rem; }
+

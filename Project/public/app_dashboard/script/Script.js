@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.json())
             .then(data => {
                 const sortedBooks = data.sort((a, b) => new Date(b.data_cadastro) - new Date(a.data_cadastro));
-                const latestBooks = sortedBooks.slice(0, 5);
+                const latestBooks = sortedBooks.slice(0, 10);
 
                 const bookList = document.getElementById('book-list');
                 bookList.innerHTML = ''; // Limpar a lista antes de adicionar os novos livros
                 latestBooks.forEach(book => {
                     const colDiv = document.createElement('div');
-                    colDiv.classList.add('col-md-3', 'mb-4');
+                    colDiv.classList.add('col-md-2', 'mb-4');
 
                     const cardDiv = document.createElement('div');
                     cardDiv.classList.add('card');
@@ -37,21 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     const cardBody = document.createElement('div');
                     cardBody.classList.add('card-body');
+                    const link = document.createElement('a');
+                    link.href = `../app_descrição/index.html?id=${book.id}`; // Constrói o link para a página de descrição
+                    link.classList.add('card-title');
+                    link.textContent = book.titulo;
+                    cardBody.appendChild(link);
+    
 
-                    const cardTitle = document.createElement('h5');
-                    cardTitle.classList.add('card-title');
-                    cardTitle.textContent = book.titulo;
-                    cardBody.appendChild(cardTitle);
-
-                    const cardText = document.createElement('p');
-                    cardText.classList.add('card-text');
-                    cardText.textContent = `Autor: ${book.autor}`;
-                    cardBody.appendChild(cardText);
-
-                    const cardDescription = document.createElement('p');
-                    cardDescription.classList.add('card-text');
-                    cardDescription.textContent = book.descricao;
-                    cardBody.appendChild(cardDescription);
 
                     cardDiv.appendChild(cardBody);
                     colDiv.appendChild(cardDiv);
@@ -73,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const user = 'ec37c83d-4b7f-458d-9e10-3fda7d37cd3e';
             const books = livros;
             const history = historico.filter(x => x.usuarioId == user);
-debugger
+
             if(history.length !=0){
                 // Filtra os livros favoritos corretamente considerando verdadeiro booleano
                 const favBooks = history.filter(item => item.favorito).map(item => item.livroId);
@@ -88,7 +80,7 @@ debugger
 
                 favBookElements.forEach(book => {
                     const colDiv = document.createElement('div');
-                    colDiv.classList.add('col-md-3', 'mb-4');
+                    colDiv.classList.add('col-md-2', 'mb-4');
 
                     const cardDiv = document.createElement('div');
                     cardDiv.classList.add('card');
@@ -102,20 +94,12 @@ debugger
                     const cardBody = document.createElement('div');
                     cardBody.classList.add('card-body');
 
-                    const cardTitle = document.createElement('h5');
-                    cardTitle.classList.add('card-title');
-                    cardTitle.textContent = book.titulo;
-                    cardBody.appendChild(cardTitle);
-
-                    const cardText = document.createElement('p');
-                    cardText.classList.add('card-text');
-                    cardText.textContent = `Autor: ${book.autor}`;
-                    cardBody.appendChild(cardText);
-
-                    const cardDescription = document.createElement('p');
-                    cardDescription.classList.add('card-text');
-                    cardDescription.textContent = book.descricao;
-                    cardBody.appendChild(cardDescription);
+                    const link = document.createElement('a');
+                    link.href = `../app_descrição/index.html?id=${book.id}`; // Constrói o link para a página de descrição
+                    link.classList.add('card-title');
+                    link.textContent = book.titulo;
+                    cardBody.appendChild(link);
+ 
 
                     cardDiv.appendChild(cardBody);
                     colDiv.appendChild(cardDiv);
@@ -123,6 +107,7 @@ debugger
                 });
             }
         })
+        
         .catch(error => console.error('Erro ao carregar os livros favoritados:', error));
     }    
 });
