@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/bda8ed8b75.js" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Tela de Cadastro de Livros</title>
@@ -27,7 +27,7 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div id="content" class="container">
         <h2 class="title">Pesquisar Livros</h2>
         <form action="" id="form-livros" class="">
                 <div class="input-field">
@@ -36,7 +36,7 @@
                 <div class="input-field">
                     <input type="text" placeholder="Autor" id="autor">
                 </div>
-                <div class="input-field">
+                <div class="input-field" style="visibility: hidden">
                     <select id="categories">
                     </select>
                 </div>
@@ -72,14 +72,15 @@
                 }
             })
         }
-     
+
         function init() {
             document.getElementById('form-livros').addEventListener('submit', function (e) {
                 e.preventDefault();
                 const title = document.getElementById('titulo').value.toLowerCase();
                 const author = document.getElementById('autor').value.toLowerCase();
                 const category = document.getElementById('categories').value;
-                searchBooks(title,author,category);
+                apiGoogleBooks();
+                //searchBooks(title,author,category);
             });
             
             exibeCategorias();
