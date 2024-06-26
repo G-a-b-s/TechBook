@@ -68,10 +68,34 @@ document.getElementById('likeButton').addEventListener('click', function () {
     document.getElementById('likecontador').innerText = contadorLikes;
 });
 
+function apiGoogleBooks(id){
+
+    fetch("https://www.googleapis.com/books/v1/volumes/"+id)
+    .then(a=>a.json())
+    .then(response =>{
+        debugger  
+            document.getElementById('autor').innerText = response.volumeInfo.authors;
+            document.getElementById('headerTitulo').innerText = response.volumeInfo.title;
+            document.getElementById('livro').src = response.volumeInfo.imageLinks != undefined ? item.volumeInfo.imageLinks.thumbnail : "../assets/img/notFind.png";
+            document.getElementById('categoriaId').innerText = response.volumeInfo.categories;
+            document.getElementById('paginas').innerText = response.volumeInfo.title;
+            document.getElementById('idioma').innerText = response.volumeInfo.language;
+            document.getElementById('editora').innerText = response.volumeInfo.title;
+            document.getElementById('descricao').innerText = response.volumeInfo.description;
+    })
+    .catch(error=>{
+        console.log(error);
+        
+    })
+}
+
+
 function init() {
     let params = new URLSearchParams(window.location.search);
     let id = params.get('id');
     searchBooks(id);
+apiGoogleBooks(id);
+
 }
 
 function searchBooks(id) {
