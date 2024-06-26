@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
             fetch('/livros').then(response => response.json())
         ])
         .then(([historico, livros]) => {
-            //const user = JSON.parse(sessionStorage.getItem('users'))[0].id;
-            const user = 'ec37c83d-4b7f-458d-9e10-3fda7d37cd3e';
+            const user = JSON.parse(sessionStorage.getItem('users'))[0].id;
+            //const user = 'ec37c83d-4b7f-458d-9e10-3fda7d37cd3e';
             const books = livros;
             const history = historico.filter(x => x.usuarioId == user);
 

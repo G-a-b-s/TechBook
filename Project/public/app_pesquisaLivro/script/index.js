@@ -79,14 +79,15 @@ function apiGoogleBooks(){
     var authorSearch = document.getElementById("autor").value;
     var search = titleSearch != "" ? bookUrl+titleSearch : authorSearch != "" ? bookUrlByAuthor+authorSearch : "";
 
-    loader(true);
-
     if(search != "" || search == null){
         const resultsTableBody = document.querySelector('#resultsTable tbody');
         resultsTableBody.innerHTML = '';
+        loader(true);
+
         fetch(search+"&maxResults=40")
         .then(a=>a.json())
         .then(response =>{
+            
             response.items
             .sort((a, b) => (a.volumeInfo.title.toLowerCase() > b.volumeInfo.title.toLowerCase() ? 1 : -1))
             .forEach(item=>{
