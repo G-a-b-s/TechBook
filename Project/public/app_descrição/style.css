@@ -13,14 +13,20 @@ body {
     border-bottom: 2px solid black;
     padding: 10px;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-
 .card {
     background-color: azure;
     margin: 10px;
     width: 100%;
     border: 2px solid rgb(58, 55, 55);
     border-radius: 30px;
+}
+.nameautor, #autor{
+    margin: 0;
+    padding: 5;
 }
 
 img {
@@ -45,7 +51,9 @@ h2 {
     margin: 10px;
     font-size: 15px;
 }
-
+h3{
+    font-size: 15px;
+}
 .icon {
     text-align: center;
 }
@@ -53,7 +61,6 @@ h2 {
 .card3 {
     margin: 10px;
     width: 100%;
-    
     height: 40%;
     border: 2px solid black;
     border-radius: 30px;
