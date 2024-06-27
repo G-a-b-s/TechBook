@@ -12,48 +12,15 @@ var estadoBotoes = {
     likeButton: false
 };
 
-/*document.getElementById('leram1').addEventListener('click', function () {
-    if (estadoBotoes.leram1) {
-        contleram--;
-        estadoBotoes.leram1 = false;
-    } else {
-        contleram++;
-        estadoBotoes.leram1 = true;
-    }
-    document.getElementById('leramcontador').innerText = contleram;
-});
-
-document.getElementById('lendo1').addEventListener('click', function () {
-    if (estadoBotoes.lendo1) {
-        contlendo--;
-        estadoBotoes.lendo1 = false;
-    } else {
-        contlendo++;
-        estadoBotoes.lendo1 = true;
-    }
-    document.getElementById('lendocontador').innerText = contlendo;
-});
-
-document.getElementById('queremler1').addEventListener('click', function () {
-    if (estadoBotoes.queremler1) {
-        contqueremler--;
-        estadoBotoes.queremler1 = false;
-    } else {
-        contqueremler++;
-        estadoBotoes.queremler1 = true;
-    }
-    document.getElementById('queremlercontador').innerText = contqueremler;
-});
-*/
-
 document.getElementById('favorito').addEventListener('click', function () {
-    if (estadoBotoes.favorito) {
+    if (estadoBotoes.favoriteButton) {
         contadorFavoritos--;
-        estadoBotoes.favorito = false;
+        estadoBotoes.favoriteButton = false;
     } else {
         contadorFavoritos++;
-        estadoBotoes.favorito = true;
+        estadoBotoes.favoriteButton = true;
     }
+    updateBookInHistory()
     document.getElementById('favoritecontador').innerText = contadorFavoritos;
 });
 
@@ -61,19 +28,145 @@ document.getElementById('likeButton').addEventListener('click', function () {
     if (estadoBotoes.likeButton) {
         contadorLikes--;
         estadoBotoes.likeButton = false;
+        
     } else {
         contadorLikes++;
         estadoBotoes.likeButton = true;
     }
+    updateBookInHistory();
     document.getElementById('likecontador').innerText = contadorLikes;
 });
 
+function updateBookInHistory(){
+    fetch('/historico')
+        .then(response => response.json())
+        .then(data => { 
+            
+            let params = new URLSearchParams(window.location.search);
+            let livroId = params.get('id');
+            let userId = JSON.parse(sessionStorage.getItem('users'))[0].id;
 
+            const book = data.find(x => x.livroId == livroId && x.usuarioId==userId);
+            const fav = document.getElementById('favoritecontador').innerText;
+            const like = document.getElementById('likecontador').innerText;
+
+
+            let historico = { 
+                id: book == undefined ? generateUUID() : book.id, 
+                livroId: livroId, 
+                ultimaPagina: 0, 
+                lido: like == 1 ? true : false, 
+                favorito: fav == 1 ? true : false,
+                usuarioId: userId};
+
+            let livro = { 
+                id: livroId,
+                titulo: document.getElementById('headerTitulo').innerText ,
+                descricao: document.getElementById('descricao').innerText,
+                livro: document.getElementById('livro').src,
+                paginas: 0,
+                idioma: document.getElementById('idioma').innerText ,
+                editora: document.getElementById('editora').innerText,
+                autor: document.getElementById('autor').innerText,
+                autorimagem: "",
+                autorbiografia: "",
+                categoriaId: 1,
+                data_cadastro: ""   
+            };
+                debugger
+            if(book == undefined){
+                setBook(livro);
+                setHistory(historico);
+            }
+            else{
+                updateHistory(historico);
+            }
+
+        })
+        .catch(error => {
+            console.log('Error fetching data:', error);
+        });
+}
+function setBook (book){
+    fetch("/livros", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(book),
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Você curtiu o livro com sucesso");
+        })
+        .catch(error => {
+            console.log('Erro ao inserir historico via API JSONServer:', error);
+        });
+}
+function setHistory(historico){
+    fetch("/historico", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(historico),
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Você curtiu o livro com sucesso");
+        })
+        .catch(error => {
+            console.log('Erro ao inserir historico via API JSONServer:', error);
+        });
+}
+
+function updateHistory(historico){
+    fetch("/historico/"+historico.id,
+        {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(historico),
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Você curtiu o livro com sucesso");
+        })
+        .catch(error => {
+            console.log('Erro ao inserir historico via API JSONServer:', error);
+        });
+}
+function getLikeAndFav(){
+    fetch('/historico')
+    .then(response => response.json())
+    .then(data => { 
+        
+        let params = new URLSearchParams(window.location.search);
+        let livroId = params.get('id');
+        let userId = JSON.parse(sessionStorage.getItem('users'))[0].id;
+
+        const book = data.find(x => x.livroId == livroId && x.usuarioId==userId);
+        const like = document.getElementById('likecontador');
+        const fav = document.getElementById('favoritecontador');
+        
+        if(book != undefined){
+            if(book.lido)
+                like.innerText = 1;
+            if(book.favorito)
+                fav.innerText = 1;
+        }
+
+    })
+    .catch(error => {
+        console.log('Error fetching data:', error);
+    });
+}
 function apiGoogleBooks(id) {
     fetch(`https://www.googleapis.com/books/v1/volumes/${id}`)
     .then(response => response.json())
     .then(response => {
-        debugger  
+          
         if (response.volumeInfo) {
             document.getElementById('autor').innerText = response.volumeInfo.authors ? response.volumeInfo.authors.join(", ") : "Autor não encontrado";
             document.getElementById('headerTitulo').innerText = response.volumeInfo.title || "Título não encontrado";
@@ -83,6 +176,7 @@ function apiGoogleBooks(id) {
             document.getElementById('idioma').innerText = response.volumeInfo.language || "Idioma não encontrado";
             document.getElementById('editora').innerText = response.volumeInfo.publisher || "Editora não encontrada";
             document.getElementById('descricao').innerText = response.volumeInfo.description || "Descrição não encontrada";
+            getLikeAndFav();
         } else {
             console.log("Dados do livro não encontrados.");
         }
@@ -92,13 +186,11 @@ function apiGoogleBooks(id) {
     });
 }
 
-
-
 function init() {
     let params = new URLSearchParams(window.location.search);
     let id = params.get('id');
-    searchBooks(id);
-apiGoogleBooks(id);
+    //searchBooks(id);
+    apiGoogleBooks(id);
 
 }
 
@@ -113,9 +205,6 @@ function searchBooks(id) {
             const livro = livros.find(x => x.id == id);
             const categoria = categorias.find(x => x.id == livro.categoriaId).nome;
 
-            //const user = "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e";
-            //const userLikes = historico.find(x => x.usuarioId == user && x.livroId == id);
-
             document.getElementById('autor').innerText = livro.autor;
             document.getElementById('headerTitulo').innerText = livro.titulo;
             document.getElementById('livro').src = livro.livro;
@@ -129,4 +218,20 @@ function searchBooks(id) {
         .catch(error => {
             console.error('Error fetching data:', error);
         });
+}
+
+function generateUUID() { 
+    var d = new Date().getTime();//Timestamp
+    var d2 = ((typeof performance !== 'undefined') && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16;//random number between 0 and 16
+        if(d > 0){//Use timestamp until depleted
+            r = (d + r)%16 | 0;
+            d = Math.floor(d/16);
+        } else {//Use microseconds since page-load if supported
+            r = (d2 + r)%16 | 0;
+            d2 = Math.floor(d2/16);
+        }
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
 }
