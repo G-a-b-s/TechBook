@@ -68,26 +68,30 @@ document.getElementById('likeButton').addEventListener('click', function () {
     document.getElementById('likecontador').innerText = contadorLikes;
 });
 
-function apiGoogleBooks(id){
 
-    fetch("https://www.googleapis.com/books/v1/volumes/"+id)
-    .then(a=>a.json())
-    .then(response =>{
+function apiGoogleBooks(id) {
+    fetch(`https://www.googleapis.com/books/v1/volumes/${id}`)
+    .then(response => response.json())
+    .then(response => {
         debugger  
-            document.getElementById('autor').innerText = response.volumeInfo.authors;
-            document.getElementById('headerTitulo').innerText = response.volumeInfo.title;
-            document.getElementById('livro').src = response.volumeInfo.imageLinks != undefined ? item.volumeInfo.imageLinks.thumbnail : "../assets/img/notFind.png";
-            document.getElementById('categoriaId').innerText = response.volumeInfo.categories;
-            document.getElementById('paginas').innerText = response.volumeInfo.title;
-            document.getElementById('idioma').innerText = response.volumeInfo.language;
-            document.getElementById('editora').innerText = response.volumeInfo.title;
-            document.getElementById('descricao').innerText = response.volumeInfo.description;
+        if (response.volumeInfo) {
+            document.getElementById('autor').innerText = response.volumeInfo.authors ? response.volumeInfo.authors.join(", ") : "Autor não encontrado";
+            document.getElementById('headerTitulo').innerText = response.volumeInfo.title || "Título não encontrado";
+            document.getElementById('livro').src = response.volumeInfo.imageLinks && response.volumeInfo.imageLinks.thumbnail ? response.volumeInfo.imageLinks.thumbnail : "../assets/img/notFind.png";
+            document.getElementById('categoriaId').innerText = response.volumeInfo.categories ? response.volumeInfo.categories.join(", ") : "Categoria não encontrada";
+            document.getElementById('paginas').innerText = response.volumeInfo.pageCount || "Número de páginas não encontrado";
+            document.getElementById('idioma').innerText = response.volumeInfo.language || "Idioma não encontrado";
+            document.getElementById('editora').innerText = response.volumeInfo.publisher || "Editora não encontrada";
+            document.getElementById('descricao').innerText = response.volumeInfo.description || "Descrição não encontrada";
+        } else {
+            console.log("Dados do livro não encontrados.");
+        }
     })
-    .catch(error=>{
-        console.log(error);
-        
-    })
+    .catch(error => {
+        console.log("Erro:", error);
+    });
 }
+
 
 
 function init() {
